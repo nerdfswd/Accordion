@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.container {
+  margin: 20px auto 0;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 350px;
+  /* box-shadow: 0 10px 20px black; */
+}
+.container h2 {
+  font-size: 30px;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
+}
+.item .title {
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #555;
+  cursor: pointer;
+}
+.icon {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-right: 2rem;
+  border: 1px solid #555;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 18px;
+}
+.desc {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-left: 2rem;
+  padding-right: 2rem;
+  max-height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  will-change: opacity, max-height;
+  transition: opacity 200ms linear, max-height 200ms linear;
+}
+.accordion .item.active .title {
+  color: #f37806;
+  border-bottom: 1px solid #e9780ffb;
+}
+.accordion .item.active .title .icon {
+  border: 1px solid #fa7304;
+  transform: translateY(-30%) rotate(45deg);
+}
+.accordion .item.active .desc {
+  opacity: 1;
+  max-height: 200px;
+  transition: all 200ms linear;
+}
+.accordion .item .desc p {
+  padding: 20px;
+  color: #222;
+}
